@@ -419,7 +419,7 @@
                 
               
 
-              <time title="创建时间：2019-04-23 21:13:03 / 修改时间：23:07:24" itemprop="dateCreated datePublished" datetime="2019-04-23T21:13:03+08:00">2019-04-23</time>
+              <time title="创建时间：2019-04-23 21:13:03 / 修改时间：23:27:07" itemprop="dateCreated datePublished" datetime="2019-04-23T21:13:03+08:00">2019-04-23</time>
             
 
             
@@ -479,12 +479,12 @@
         
           
             <p>要想在命令行下高效操作，一般除了掌握必要的快捷键意外，还需要掌握系统给我们提供的一些小手段，这里主要指对历史命令的高效利用，本文对此进行了整理。</p>
-<h2 id="Bang-命令"><a href="#Bang-命令" class="headerlink" title="Bang(!)命令"></a><a href="http://blog.useasp.net/archive/2014/06/03/improve-efficiency-with-bash-history-expansion.aspx" title="感叹号提高Bash下效率——历史扩展(bang命令)" target="_blank" rel="noopener">Bang(!)命令</a></h2><p>历史扩展(History Expansion)又被称为Bang(!)命令<sup>1</sup>，历史扩展是bash将历史命令转换到可执行命令的过程。Bash下的History库提供了一个与csh下历史扩展类似的历史扩展功能。历史扩展中操作历史命令一般有两个部分：</p>
+<h2 id="Bang-命令"><a href="#Bang-命令" class="headerlink" title="Bang(!)命令"></a>Bang(!)命令</h2><p>历史扩展(History Expansion)又被称为Bang(!)命令<sup>1</sup>，历史扩展是bash将历史命令转换到可执行命令的过程。Bash下的History库提供了一个与csh下历史扩展类似的历史扩展功能。历史扩展中操作历史命令一般有两个部分：</p>
 <ol>
 <li>首先要从历史命令中找出相对应的命令，被选择到的命令我们称作为Event(条目)，比如上面的Bang Bang(!!)，就是选择最后一条命令；</li>
 <li>选择选定行的部分或全部文本以包含到当前行中。要操作的条目(Event)Bash将其拆分成了Words(词)，命令中的Words是靠空格来分割的，我们就可以使用修饰符(Modifiers)来调整Words以符合我们的要求。注意：Words并不是英文单词，而是一个字符序列而已。</li>
 </ol>
-<h3 id="条目标志符-Event-Designators"><a href="#条目标志符-Event-Designators" class="headerlink" title="条目标志符(Event Designators)"></a>条目标志符(Event Designators)</h3><p>  条目标志符是一个到历史列表内一个命令行实体的引用，除非是绝对引用，不然条目的引用是相对历史列表中当前位置的。</p>
+<h3 id="条目标志符-Event-Designators"><a href="#条目标志符-Event-Designators" class="headerlink" title="条目标志符(Event Designators)"></a>条目标志符(Event Designators)</h3><p>条目标志符是一个到历史列表内一个命令行实体的引用，除非是绝对引用，不然条目的引用是相对历史列表中当前位置的。</p>
 <table>
 <thead>
 <tr>
@@ -551,7 +551,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="词标志符-Word-Designators"><a href="#词标志符-Word-Designators" class="headerlink" title="词标志符(Word Designators)"></a>词标志符(Word Designators)</h3><p>  词标志符被用来在条目里面选择需要的词。一般用”:”分隔条目指示符和词指示符。当词指示符是以”^”,”$”,”*“,”-“,”%”开头时，也可能会省略”:”。词是从一行的行首开始，第一个词编号为0.插入到当前行中时，这些词使用单个空格分隔。</p>
+<h3 id="词标志符-Word-Designators"><a href="#词标志符-Word-Designators" class="headerlink" title="词标志符(Word Designators)"></a>词标志符(Word Designators)</h3><p>词标志符被用来在条目里面选择需要的词。一般用”:”分隔条目指示符和词指示符。当词指示符是以”^”,”$”,”*“,”-“,”%”开头时，也可能会省略”:”。词是从一行的行首开始，第一个词编号为0.插入到当前行中时，这些词使用单个空格分隔。</p>
 <table>
 <thead>
 <tr>
@@ -689,11 +689,13 @@ Ctrl+c 删除整行
 </code></pre><h3 id="颠倒"><a href="#颠倒" class="headerlink" title="颠倒"></a>颠倒</h3><pre><code>Ctrl+t 颠倒光标所在处及其之前的字符位置，并将光标移动到下一个字符
 Esc+t  颠倒光标所在处及其之前单词的位置
 </code></pre><h3 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h3><pre><code>Ctrl+(x u) 按住Ctrl的同时再先后按x和u，撤销刚才的操作
-</code></pre><p>说明：</p>
+</code></pre><p><strong>说明：</strong></p>
 <ol>
 <li>!被称为Bang，而#!被称为Sha-Bang或Sh-Bang，因为#!是由Sharp(#)和Bang(!)组成，所以简称Sha-Bang。</li>
 </ol>
-<p>参考：</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="http://blog.useasp.net/archive/2014/06/03/improve-efficiency-with-bash-history-expansion.aspx" title="感叹号提高Bash下效率——历史扩展(bang命令)" target="_blank" rel="noopener">感叹号提高Bash下效率——历史扩展(bang命令)</a></li>
+</ol>
 
           
         
@@ -799,6 +801,22 @@ Esc+t  颠倒光标所在处及其之前单词的位置
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-23 23:26:07" itemprop="dateModified" datetime="2019-04-23T23:26:07+08:00">2019-04-23</time>
+              
+            
           </span>
 
           
@@ -849,16 +867,18 @@ Esc+t  颠倒光标所在处及其之前单词的位置
 
       
         
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/04/22/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
           
-          <!--/noindex-->
         
       
     </div>
@@ -977,10 +997,6 @@ Esc+t  颠倒光标所在处及其之前单词的位置
                     
                   
                     
-                    
-                      
-                    
-                      
                     
                       
                     
